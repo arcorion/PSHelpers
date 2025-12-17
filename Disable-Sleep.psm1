@@ -7,6 +7,7 @@ function Disable-Sleep {
 	<#
 		.SYNOPSIS
 		Disable all sleep modes, including hibernation, display sleep, and disk timeout.
+		Requires Administrator.
 	#>
 	if (Get-Administrator) {
 		powercfg.exe -x -monitor-timeout-ac 0
