@@ -16,7 +16,7 @@ function Install-InstallTools {
 	if (!($repository.InstallationPolicy -eq "Trusted")) {
 		Set-Repository -Name "PSGallery" -InstallationPolicy "Trusted"
 	}
-	
+
 	# Check for winget - check for module, but it's possible
 	# WinGet was installed via other means, so check for command as
 	# well.
